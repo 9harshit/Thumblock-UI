@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  align: center;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+input {
+
+  background-color: #e24a4a;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input:hover {
+  opacity: 0.8;
+}
+
+</style>
+<script>
+function go()
+	{
+	
+	window.open("payment.html" ,"_top");
+		
+	}
+	function out()
+	{
+	window.open("login.html" , "_top");
+	}
+</script>
+</head>
+
+<body>
+<form >
+
+    <table>
+   
+	<tr><td>ID</td><td>001</td>
+	<tr><td>Email</td><td> manandalal@gmail.com</td>
+	<tr><td>Name</td> <td>Manan Dalal</td> 
+ <tr><td>Date of Birth</td> <td> 14/8/98</td> 
+	 <tr><td>Number</td> <td>987654321</td> 
+    
+  </table>
+
+ <input type='button' value='Buy Policy'  id='probtn' name= 'probtn' onclick = "go();"> 
+<input type='button' value='Sign Out' onclick = "out();" >
+</body>
+</html>
