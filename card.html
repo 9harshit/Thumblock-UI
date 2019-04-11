@@ -66,9 +66,11 @@ hr {
 <script>
 function go()
 	{
-		
-	
-		window.location.replace(''market://details?id=com.example.android.fingerprintdialog');
+    var min=0; 
+    var max=100;  
+    var random = Math.random() * (+max - +min) + +min; 
+    document.write("Verification ID : " + random );  
+		//window.location.replace(''market://details?id=com.example.android.fingerprintdialog');
 	}
 
 </script>
