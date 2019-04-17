@@ -112,7 +112,7 @@ function login()
 		 var a = document.getElementsByTagName("input")[0].value;
 		var p = document.getElementsByTagName("input")[1].value;	
 			if(a == "manan" && p == "123")
-			window.open("account.html");
+			  location.replace("account.html")
 		}
 </script>
 <body>
@@ -132,8 +132,8 @@ function login()
      <b>Password</b><br>
       <input type="password" name="psw" required>
     </div>
-
-	<button type="submit" style="width:10%;" name="loginbtn" onclick="login();")" ><a href="account.html">CLick here</a></button>
+<!--a href="account.html">CLick here</a-->
+	<button type="submit" style="width:10%;" name="loginbtn" onclick="login();")" >Login</button>
 	<button onclick="document.getElementById('registerpg').style.display='block'" style="width:10%;" >Register</button>
 </div>
 </center>
