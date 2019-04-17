@@ -112,7 +112,7 @@ function login()
 		 var a = document.getElementsByTagName("input")[0].value;
 		var p = document.getElementsByTagName("input")[1].value;	
 			if(a == "manan" && p == "123")
-			window.open("https://9harshit.github.io/de/account.html","_top");
+			window.open("account.html");
 		}
 </script>
 <body>
@@ -133,7 +133,7 @@ function login()
       <input type="password" name="psw" required>
     </div>
     
-	  <button type="submit" style="width:10%;" name="loginbtn" onclick="login();" >Login</button>
+	  <button type="submit" style="width:10%;" name="loginbtn" onclick="window.open("account.html")" >Login</button>
 	<button onclick="document.getElementById('registerpg').style.display='block'" style="width:10%;" >Register</button>
 </div>
 </center>
