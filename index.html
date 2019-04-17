@@ -2,6 +2,12 @@
 <html>
 <head>
 	<title>Login Page</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <style>
 body 
 {
@@ -45,7 +51,7 @@ button:hover {
   background-color: #fefefe;
   margin: 0 auto 15% auto;
   border: 1px solid #888;
-  width: 70%;
+  width: 100%;
 }
 
 .animate {
@@ -74,6 +80,11 @@ button:hover {
 	border: 1px solid lightgrey;
   border-radius: 3px;
   
+}
+
+.form-group
+{
+	text-decoration: bold;
 }
 
 </style>
@@ -122,9 +133,9 @@ function login()
 	</div>
 <div class="login">
 <center>
-<h2>Login</h2>
+<h2  style="margin-top: 15px;">Login</h2>
 
-<form action="account.html">
+<!--form action="account.html">
  <div class="container">
       <b>Username</b><br>
       <input type="text" name="usname" id="usname" required><br><br>
@@ -132,48 +143,71 @@ function login()
      <b>Password</b><br>
       <input type="password" name="psw" required>
     </div>
-<!--a href="account.html">CLick here</a-->
-	<button type="submit" style="width:10%;" name="loginbtn" )" >Login</button>
+	<button type="submit" style="width:10%;color:white" name="loginbtn" value="Login">Login</button>
 	<button onclick="document.getElementById('registerpg').style.display='block'" style="width:10%;" >Register</button>
 </div>
 </center>
+</form-->
+
+<form action="account.html">
+	<div class="container" style="width: 400px;">
+	  <div class="form-group">
+	    <label for="usname"><b>Username:</b></label>
+	    <input type="usname" class="form-control" name="usname" id="usname" required>
+	  </div>
+	  <div class="form-group">
+	    <label for="psw"><b>Password:</b></label>
+	    <input type="password" class="form-control" name="psw" required>
+	  </div>
+	  <button type="submit" class="btn btn-danger" name="loginbtn">Login</button>
+	  <button class="btn btn-danger" onclick="document.getElementById('registerpg').style.display='block'">Register</button>
+	</div>
+	</center>	
 </form>
+ 
+
 <div id="registerpg" class="modal" style="text-align:center;">
   
-  <form name="form1" class="modal-content animate" >
-      <h1>Register</h1>
-    
-    <hr>
-	<label for="Name"><b>Name</b></label><br>
-    <input type="text" name="name" required><br><br>
-	
-	<label for="email"><b>Email</b></label><br>
-    <input type="text"  name="email"   required><br><br>
-
-    <label for="psw"><b>Password</b></label><br>
-    <input type="password"  name="rpsw"  required><br><br>
-
-    <label for="psw-repeat"><b>Confirm Password</b></label><br>
-    <input type="password"  name="rcpswd" required><br><br>
-	
-  	<label for="dob"><b>Date of birth</b></label><br>
-    <input type="text" name="dob" required><br><br>
-	
-	<label for="number"><b>Number</b></label><br>
-    <input type="text" name="number"  required><br><br>
-	
-	
-	<hr>
-
-    <input type="checkbox" name="terms" required>By creating an account you agree to our Terms & Privacy.</p>
-    <button type="submit" class="registerbtn" style="width:20%;" onclick= "ValidateEmail(document.form1.email,document.form1.number)">Create Account</button>
-	 <button type="reset" class="resetbtn" style="width:20%;" >Reset</button>
-	<div class="container signin">
-    <p>Already have an account? <a href="index.html" >Sign in</a>.</p>
-  </div>
-  </div>
+  <form action="index.html" name="form1" class="modal-content animate">
+  	<div class="container" style="width: 400px;">
+  		<h1>Register</h1><hr>
+  		<div class="form-group">	
+			<label for="Name"><b>Name</b></label><br>
+		    <input type="text" name="name" class="form-control" required><br><br>
+		</div>
+		<div class="form-group">
+			<label for="email"><b>Email</b></label><br>
+			<input type="text"  name="email" class="form-control"  required><br><br>
+		</div>
+		<div class="form-group">		
+		    <label for="psw"><b>Password</b></label><br>
+		    <input type="password"  name="rpsw" class="form-control" required><br><br>
+		</div>
+		<div class="form-group">
+		    <label for="psw-repeat"><b>Confirm Password</b></label><br>
+		    <input type="password"  name="rcpswd" class="form-control" required><br><br>
+		</div>    
+		<div class="form-group">
+		  	<label for="dob"><b>Date of birth</b></label><br>
+		    <input type="text" name="dob" class="form-control" required><br><br>
+		</div>
+		<div class="form-group">
+			<label for="number"><b>Number</b></label><br>
+		    <input type="text" name="number" class="form-control" required><br><br>
+		</div><hr>
+		<div class="form-group form-check">
+	      <label class="form-check-label">
+	        <input class="form-check-input" type="checkbox" name="terms" required>By creating an account you agree to our Terms & Privacy.
+	      </label>
+	    </div>
+    	<button type="submit" class="registerbtn btn btn-danger" onclick= "ValidateEmail(document.form1.email,document.form1.number)">Create Account</button>
+	 	<button type="reset" class="resetbtn btn btn-danger">Reset</button>
+		<div class="container signin">
+	    <p>Already have an account? <a href="index.html" >Sign in</a>.</p>
+	  </div>
+ 	</div>
   </form>
-
+</div>
 <script>
 
 	var modal = document.getElementById('registerpg');
