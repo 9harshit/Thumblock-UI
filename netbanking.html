@@ -112,35 +112,37 @@ button:hover {
 <script>
 function go()
 	{
-    var random = Math.floor(Math.random() * 101);
-    alert("Verification ID : " + random );  
+   // var random = Math.floor(Math.random() * 101);
+   // alert("Verification ID : " + random );  
 		//window.location.replace(''market://details?id=com.example.android.fingerprintdialog');
+		
 	}
 </script>
 
 </head>
 <body>
 <b>
-    <div class="container">
-       <div class="banking">
-	        <label for="cname">Bank Name</label>
-	      <select>
-	      <option>State Bank of India</option>
-		      <option>HDFC Bank</option>
-	      </select>
-         <label for="acname">Reciever's Bank name</label>
-            <input type="text" id="acname" name="acname" required>
-            <label for="acname">Reciever's  Account No.</label>
-            <input type="text" id="acname" name="acname" required>
-            <label for="amt">Transfer Amount</label>
-            <input type="text" id="amt" name="amt" required >
-           <label for="acname">Reciever's  IFCB code</label>
-            <input type="text" id="acname" name="acname" required>
-            
-           </div></b></b></b></b>
-		 <input type="submit" value="Verify" class="btn"  id="paybtn" onclick="go()">
-   </div>
+	<form action="mssg.html">	
+	    <div class="container">
+	       <div class="banking">
+			<label for="cname">Bank Name</label>
+		      <select>
+		      <option>State Bank of India</option>
+			      <option>HDFC Bank</option>
+		      </select>
+		 <label for="acname">Reciever's Bank name</label>
+		    <input type="text" id="acname" name="acname" required>
+		    <label for="acname">Reciever's  Account No.</label>
+		    <input type="text" id="acname" name="acname" required>
+		    <label for="amt">Transfer Amount</label>
+		    <input type="text" id="amt" name="amt" required >
+		   <label for="acname">Reciever's  IFCB code</label>
+		    <input type="text" id="acname" name="acname" required>
 
+		   </div></b></b></b></b>
+			 <input type="submit" value="Verify" class="btn"  id="paybtn">
+	   </div>
+</form>
 
 </body>
 </html>
